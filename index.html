@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas al Rescate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- BIENVENIDA -->
+        <section id="bienvenida" class="pantalla activa">
+
+            <div class="welcome">
+
+                <div class="logo">🐾</div>
+
+                <h1>PATITAS<br>AL RESCATE</h1>
+
+                <p>Tecnología que salva vidas.</p>
+
+                <button class="btn-main" onclick="mostrarPantalla('inicio')">
+                    Comenzar
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- INICIO -->
+        <section id="inicio" class="pantalla">
+
+            <div class="top-bar">
+
+                <div>
+                    <h2>Hola Francisco 👋</h2>
+                    <p>Bienvenido nuevamente</p>
+                </div>
+
+                <div class="avatar-mini">
+                    👤
+                </div>
+
+            </div>
+
+            <div class="premium-banner">
+
+                <h3>⭐ Plan Premium</h3>
+
+                <p>
+                    Alertas prioritarias, seguimiento
+                    avanzado y beneficios exclusivos.
+                </p>
+
+                <button>Ver plan premium</button>
+
+            </div>
+
+            <h3 class="titulo">Acciones rápidas</h3>
+
+            <div class="menu-grid">
+
+                <div class="menu-card" onclick="mostrarPantalla('reportar')">
+
+                    <div class="icono">🚨</div>
+
+                    <h4>Reportar</h4>
+
+                    <p>Reporta animales en riesgo</p>
+
+                </div>
+
+                <div class="menu-card" onclick="mostrarPantalla('adoptar')">
+
+                    <div class="icono">❤️</div>
+
+                    <h4>Adoptar</h4>
+
+                    <p>Encuentra un compañero</p>
+
+                </div>
+
+                <div class="menu-card" onclick="mostrarPantalla('perfil')">
+
+                    <div class="icono">👤</div>
+
+                    <h4>Mi Perfil</h4>
+
+                    <p>Tu actividad</p>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <div class="icono">📍</div>
+
+                    <h4>Mapa</h4>
+
+                    <p>Próximamente</p>
+
+                </div>
+
+            </div>
+
+            <div class="actividad">
+
+                <h3>📋 Actividad reciente</h3>
+
+                <div class="actividad-item">
+                    <strong>
+                        Firulais fue adoptado exitosamente ❤️
+                    </strong>
+                    <span>Hace 2 horas · Peñalolén</span>
+                </div>
+
+                <div class="actividad-item">
+                    <strong>
+                        Nuevo rescate reportado en Pudahuel 🚨
+                    </strong>
+                    <span>Hace 5 horas</span>
+                </div>
+
+                <div class="actividad-item">
+                    <strong>
+                        3 nuevos voluntarios se unieron 🙌
+                    </strong>
+                    <span>Ayer</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- REPORTAR -->
+        <section id="reportar" class="pantalla">
+
+            <div class="screen-header">
+
+                <button onclick="mostrarPantalla('inicio')">
+                    ←
+                </button>
+
+                <h2>Reportar Animal</h2>
+
+            </div>
+
+            <div class="contenido">
+
+                <label>Ubicación</label>
+
+                <input type="text" placeholder="Ej: Santiago Centro">
+
+                <label>Tipo de animal</label>
+
+                <div class="animal-grid">
+
+                    <div class="animal-card selected" onclick="seleccionarAnimal(this)">
+                        🐕
+                        <span>Perro</span>
+                    </div>
+
+                    <div class="animal-card" onclick="seleccionarAnimal(this)">
+                        🐈
+                        <span>Gato</span>
+                    </div>
+
+                    <div class="animal-card" onclick="seleccionarAnimal(this)">
+                        🦜
+                        <span>Ave</span>
+                    </div>
+
+                    <div class="animal-card" onclick="seleccionarAnimal(this)">
+                        🐾
+                        <span>Otro</span>
+                    </div>
+
+                </div>
+
+                <label>Urgencia</label>
+
+                <div class="urgencia-grid">
+
+                    <div class="urgencia-card selected-urgencia" onclick="seleccionarUrgencia(this)">
+                        🟢 Estable
+                    </div>
+
+                    <div class="urgencia-card" onclick="seleccionarUrgencia(this)">
+                        ⚠ Atención
+                    </div>
+
+                    <div class="urgencia-card" onclick="seleccionarUrgencia(this)">
+                        🚨 Urgente
+                    </div>
+
+                </div>
+
+                <label>Descripción</label>
+
+                <textarea rows="5" placeholder="Describe la situación...">
+            </textarea>
+
+                <button class="btn-main" onclick="enviarReporte()">
+
+                    Enviar Reporte
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ADOPTAR -->
+        <section id="adoptar" class="pantalla">
+
+            <div class="screen-header">
+
+                <button onclick="mostrarPantalla('inicio')">
+                    ←
+                </button>
+
+                <h2>Adopciones</h2>
+
+            </div>
+
+            <div class="card-animal">
+
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800">
+
+                <div class="animal-info">
+
+                    <h3>Rocky</h3>
+
+                    <p>🐶 2 años</p>
+
+                    <p>📍 Santiago</p>
+
+                    <button>Ver Perfil</button>
+
+                </div>
+
+            </div>
+
+            <div class="card-animal">
+
+                <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=800">
+
+                <div class="animal-info">
+
+                    <h3>Luna</h3>
+
+                    <p>🐱 1 año</p>
+
+                    <p>📍 Maipú</p>
+
+                    <button>Adoptar</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="perfil" class="pantalla">
+
+            <div class="perfil-header">
+
+                <button onclick="mostrarPantalla('inicio')" class="volver-btn">
+                    ←
+                </button>
+
+                <h2>Mi Perfil</h2>
+
+                <button class="editar-btn">
+                    Editar
+                </button>
+
+            </div>
+
+            <div class="perfil-top">
+
+                <div class="avatar-container">
+
+                    <img id="fotoPerfil" src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png">
+
+                    <label for="subirFoto" class="editar-foto">
+                        ✎
+                    </label>
+
+                    <input type="file" id="subirFoto" accept="image/*">
+
+                </div>
+
+                <h2>Francisco</h2>
+
+                <p>📍 Santiago, Chile</p>
+
+                <div class="nivel">
+                    ⭐ Colaborador Oro
+                </div>
+
+            </div>
+
+            <div class="estadisticas">
+
+                <div class="stat-box">
+                    <h3>12</h3>
+                    <span>Reportes</span>
+                </div>
+
+                <div class="stat-box">
+                    <h3>2</h3>
+                    <span>Adopciones</span>
+                </div>
+
+                <div class="stat-box">
+                    <h3>8</h3>
+                    <span>Rescatados</span>
+                </div>
+
+            </div>
+
+            <div class="progreso">
+
+                <div class="progreso-header">
+                    ⭐ Colaborador Oro → Platino
+                    <span>12/20 pts</span>
+                </div>
+
+                <div class="barra">
+                    <div class="barra-fill"></div>
+                </div>
+
+                <p>8 reportes más para alcanzar Colaborador Platino</p>
+
+            </div>
+
+            <h3 class="seccion-titulo">Logros</h3>
+
+            <div class="logros-grid">
+
+                <div class="logro">
+                    🐕
+                    <h4>Primer rescate</h4>
+                    <p>Reportaste tu primer animal</p>
+                </div>
+
+                <div class="logro">
+                    ❤️
+                    <h4>Adoptante</h4>
+                    <p>Primera adopción</p>
+                </div>
+
+                <div class="logro">
+                    ⭐
+                    <h4>Colaborador Oro</h4>
+                    <p>10+ reportes</p>
+                </div>
+
+                <div class="logro">
+                    🏆
+                    <h4>Platino</h4>
+                    <p>20+ reportes</p>
+                </div>
+
+                <div class="logro">
+                    🦸
+                    <h4>Héroe Animal</h4>
+                    <p>5 adopciones</p>
+                </div>
+
+                <div class="logro">
+                    🤝</h4>
+                    <h4>Voluntario</h4>
+                    <p>Únete al equipo</p>
+                </div>
+
+            </div>
+
+            <h3 class="seccion-titulo">Actividad reciente</h3>
+
+            <div class="actividad-item">
+                <strong>Reporte enviado · Pudahuel</strong>
+                <span>Perro herido, atendido por voluntario</span>
+            </div>
+
+            <div class="actividad-item">
+                <strong>Adoptaste a Luna</strong>
+                <span>Gata mestiza, 1 año</span>
+            </div>
+
+            <div class="actividad-item">
+                <strong>¡Subiste a Colaborador Oro!</strong>
+                <span>Superaste 10 reportes</span>
+            </div>
+
+            <h3 class="seccion-titulo">Configuración</h3>
+
+            <div class="config-item">🔔 Notificaciones</div>
+            <div class="config-item">🔒 Privacidad</div>
+            <div class="config-item">❓ Ayuda y soporte</div>
+            <div class="config-item cerrar">🚪 Cerrar sesión</div>
+
+        </section>
+        <script src="script.js"></script>
+
+</body>
+
+</html>
