@@ -104,3 +104,14 @@ function cambiarPlan(tipo) {
     }
 
 }
+function filtrarMapa(btn) {
+
+    document
+        .querySelectorAll(".filtro")
+        .forEach(f => {
+            f.classList.remove("activo");
+        });
+
+    btn.classList.add("activo");
+
+}

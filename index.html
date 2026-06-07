@@ -98,11 +98,15 @@
 
                 <div class="menu-card">
 
-                    <div class="icono">📍</div>
+                    <div class="menu-card" onclick="mostrarPantalla('mapa')">
 
-                    <h4>Mapa</h4>
+                        <div class="icono">📍</div>
 
-                    <p>Próximamente</p>
+                        <h4>Mapa</h4>
+
+                        <p>Ver rescates cercanos</p>
+
+                    </div>
 
                 </div>
 
@@ -406,7 +410,8 @@
             <div class="config-item">❓ Ayuda y soporte</div>
             <div class="config-item cerrar">🚪 Cerrar sesión</div>
 
-        </section> <!-- PREMIUM -->
+        </section>
+        <!-- PREMIUM -->
 
         <section id="premium" class="pantalla">
 
@@ -503,6 +508,142 @@
                     <li>✔ Prioridad máxima</li>
                     <li>✔ Beneficios exclusivos</li>
                 </ul>
+
+            </div>
+
+        </section>
+        <!-- MAPA -->
+
+        <section id="mapa" class="pantalla">
+
+            <div class="screen-header">
+
+                <button onclick="mostrarPantalla('inicio')">
+                    ←
+                </button>
+
+                <h2>Mapa de rescates</h2>
+
+            </div>
+
+            <div class="mapa-filtros">
+
+                <button class="filtro activo" onclick="filtrarMapa(this)">
+                    Todos
+                </button>
+
+                <button class="filtro urgente" onclick="filtrarMapa(this)">
+                    Urgente
+                </button>
+
+                <button class="filtro atencion" onclick="filtrarMapa(this)">
+                    Atención
+                </button>
+
+                <button class="filtro estable" onclick="filtrarMapa(this)">
+                    Estable
+                </button>
+
+                <button class="filtro adopcion" onclick="filtrarMapa(this)">
+                    Adopción
+                </button>
+
+            </div>
+
+            <div class="mapa-box">
+
+                <div class="pin rojo">!</div>
+                <div class="pin amarillo">▲</div>
+                <div class="pin verde">✓</div>
+                <div class="pin azul">♥</div>
+
+            </div>
+
+            <div class="estadisticas-mapa">
+
+                <div class="map-stat">
+                    <h3>2</h3>
+                    <span>Urgentes</span>
+                </div>
+
+                <div class="map-stat">
+                    <h3>1</h3>
+                    <span>Atención</span>
+                </div>
+
+                <div class="map-stat">
+                    <h3>2</h3>
+                    <span>Adopción</span>
+                </div>
+
+            </div>
+
+            <h3 class="seccion-titulo">
+                Rescates cercanos
+            </h3>
+
+            <div class="rescate-card">
+
+                <div>
+                    <strong>Perro herido en vereda</strong>
+                    <p>Pudahuel · 0.8 km</p>
+                </div>
+
+                <span class="badge urgente">
+                    Urgente
+                </span>
+
+            </div>
+
+            <div class="rescate-card">
+
+                <div>
+                    <strong>Gata con crías abandonada</strong>
+                    <p>Maipú · 1.4 km</p>
+                </div>
+
+                <span class="badge urgente">
+                    Urgente
+                </span>
+
+            </div>
+
+            <div class="rescate-card">
+
+                <div>
+                    <strong>Cachorro desnutrido</strong>
+                    <p>La Florida · 2.1 km</p>
+                </div>
+
+                <span class="badge atencion">
+                    Atención
+                </span>
+
+            </div>
+
+            <div class="rescate-card">
+
+                <div>
+                    <strong>Animal rescatado</strong>
+                    <p>Santiago Centro · 3.2 km</p>
+                </div>
+
+                <span class="badge estable">
+                    Estable
+                </span>
+
+            </div>
+
+            <div class="rescate-card">
+
+                <div>
+                    <strong>Luna disponible para adopción</strong>
+                    <p>Ñuñoa · 3.8 km</p>
+                </div>
+
+                <span class="badge adopcion">
+                    Adopción
+                </span>
 
             </div>
 
