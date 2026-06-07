@@ -65,581 +65,581 @@
 
             <h3 class="titulo">Acciones rápidas</h3>
 
-            <div class="menu-grid">
 
-                <div class="menu-card" onclick="mostrarPantalla('reportar')">
 
-                    <div class="icono">🚨</div>
+            <div class="menu-card" onclick="mostrarPantalla('reportar')">
 
-                    <h4>Reportar</h4>
+                <div class="icono">🚨</div>
 
-                    <p>Reporta animales en riesgo</p>
+                <h4>Reportar</h4>
 
-                </div>
+                <p>Reporta animales en riesgo</p>
 
-                <div class="menu-card" onclick="mostrarPantalla('adoptar')">
+            </div>
 
-                    <div class="icono">❤️</div>
+            <div class="menu-card" onclick="mostrarPantalla('adoptar')">
 
-                    <h4>Adoptar</h4>
+                <div class="icono">❤️</div>
 
-                    <p>Encuentra un compañero</p>
+                <h4>Adoptar</h4>
 
-                </div>
+                <p>Encuentra un compañero</p>
 
-                <div class="menu-card" onclick="mostrarPantalla('perfil')">
+            </div>
 
-                    <div class="icono">👤</div>
+            <div class="menu-card" onclick="mostrarPantalla('perfil')">
 
-                    <h4>Mi Perfil</h4>
+                <div class="icono">👤</div>
 
-                    <p>Tu actividad</p>
+                <h4>Mi Perfil</h4>
 
-                </div>
+                <p>Tu actividad</p>
 
-                <div class="menu-card">
+            </div>
 
-                    <div class="menu-card" onclick="mostrarPantalla('mapa')">
+            <div class="menu-card">
 
-                        <div class="icono">📍</div>
+                <div class="menu-card" onclick="mostrarPantalla('mapa')">
 
-                        <h4>Mapa</h4>
+                    <div class="icono">📍</div>
 
-                        <p>Ver rescates cercanos</p>
+                    <h4>Mapa</h4>
 
-                    </div>
+                    <p>Ver rescates cercanos</p>
 
                 </div>
 
             </div>
 
-            <div class="actividad">
+    </div>
 
-                <h3>📋 Actividad reciente</h3>
+    <div class="actividad">
 
-                <div class="actividad-item">
-                    <strong>
-                        Firulais fue adoptado exitosamente ❤️
-                    </strong>
-                    <span>Hace 2 horas · Peñalolén</span>
+        <h3>📋 Actividad reciente</h3>
+
+        <div class="actividad-item">
+            <strong>
+                Firulais fue adoptado exitosamente ❤️
+            </strong>
+            <span>Hace 2 horas · Peñalolén</span>
+        </div>
+
+        <div class="actividad-item">
+            <strong>
+                Nuevo rescate reportado en Pudahuel 🚨
+            </strong>
+            <span>Hace 5 horas</span>
+        </div>
+
+        <div class="actividad-item">
+            <strong>
+                3 nuevos voluntarios se unieron 🙌
+            </strong>
+            <span>Ayer</span>
+        </div>
+
+    </div>
+
+    </section>
+
+    <!-- REPORTAR -->
+    <section id="reportar" class="pantalla">
+
+        <div class="screen-header">
+
+            <button onclick="mostrarPantalla('inicio')">
+                ←
+            </button>
+
+            <h2>Reportar Animal</h2>
+
+        </div>
+
+        <div class="contenido">
+
+            <label>Ubicación</label>
+
+            <input type="text" placeholder="Ej: Santiago Centro">
+
+            <label>Tipo de animal</label>
+
+            <div class="animal-grid">
+
+                <div class="animal-card selected" onclick="seleccionarAnimal(this)">
+                    🐕
+                    <span>Perro</span>
                 </div>
 
-                <div class="actividad-item">
-                    <strong>
-                        Nuevo rescate reportado en Pudahuel 🚨
-                    </strong>
-                    <span>Hace 5 horas</span>
+                <div class="animal-card" onclick="seleccionarAnimal(this)">
+                    🐈
+                    <span>Gato</span>
                 </div>
 
-                <div class="actividad-item">
-                    <strong>
-                        3 nuevos voluntarios se unieron 🙌
-                    </strong>
-                    <span>Ayer</span>
+                <div class="animal-card" onclick="seleccionarAnimal(this)">
+                    🦜
+                    <span>Ave</span>
+                </div>
+
+                <div class="animal-card" onclick="seleccionarAnimal(this)">
+                    🐾
+                    <span>Otro</span>
                 </div>
 
             </div>
 
-        </section>
+            <label>Urgencia</label>
 
-        <!-- REPORTAR -->
-        <section id="reportar" class="pantalla">
+            <div class="urgencia-grid">
 
-            <div class="screen-header">
+                <div class="urgencia-card selected-urgencia" onclick="seleccionarUrgencia(this)">
+                    🟢 Estable
+                </div>
 
-                <button onclick="mostrarPantalla('inicio')">
-                    ←
-                </button>
+                <div class="urgencia-card" onclick="seleccionarUrgencia(this)">
+                    ⚠ Atención
+                </div>
 
-                <h2>Reportar Animal</h2>
+                <div class="urgencia-card" onclick="seleccionarUrgencia(this)">
+                    🚨 Urgente
+                </div>
 
             </div>
 
-            <div class="contenido">
+            <label>Descripción</label>
 
-                <label>Ubicación</label>
-
-                <input type="text" placeholder="Ej: Santiago Centro">
-
-                <label>Tipo de animal</label>
-
-                <div class="animal-grid">
-
-                    <div class="animal-card selected" onclick="seleccionarAnimal(this)">
-                        🐕
-                        <span>Perro</span>
-                    </div>
-
-                    <div class="animal-card" onclick="seleccionarAnimal(this)">
-                        🐈
-                        <span>Gato</span>
-                    </div>
-
-                    <div class="animal-card" onclick="seleccionarAnimal(this)">
-                        🦜
-                        <span>Ave</span>
-                    </div>
-
-                    <div class="animal-card" onclick="seleccionarAnimal(this)">
-                        🐾
-                        <span>Otro</span>
-                    </div>
-
-                </div>
-
-                <label>Urgencia</label>
-
-                <div class="urgencia-grid">
-
-                    <div class="urgencia-card selected-urgencia" onclick="seleccionarUrgencia(this)">
-                        🟢 Estable
-                    </div>
-
-                    <div class="urgencia-card" onclick="seleccionarUrgencia(this)">
-                        ⚠ Atención
-                    </div>
-
-                    <div class="urgencia-card" onclick="seleccionarUrgencia(this)">
-                        🚨 Urgente
-                    </div>
-
-                </div>
-
-                <label>Descripción</label>
-
-                <textarea rows="5" placeholder="Describe la situación...">
+            <textarea rows="5" placeholder="Describe la situación...">
             </textarea>
 
-                <button class="btn-main" onclick="enviarReporte()">
+            <button class="btn-main" onclick="enviarReporte()">
 
-                    Enviar Reporte
+                Enviar Reporte
 
-                </button>
+            </button>
 
-            </div>
-
-        </section>
-
-        <!-- ADOPTAR -->
-        <section id="adoptar" class="pantalla">
-
-            <div class="screen-header">
-
-                <button onclick="mostrarPantalla('inicio')">
-                    ←
-                </button>
-
-                <h2>Adopciones</h2>
-
-            </div>
-
-            <div class="card-animal">
-
-                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800">
-
-                <div class="animal-info">
-
-                    <h3>Rocky</h3>
-
-                    <p>🐶 2 años</p>
-
-                    <p>📍 Santiago</p>
-
-                    <button>Ver Perfil</button>
-
-                </div>
-
-            </div>
-
-            <div class="card-animal">
-
-                <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=800">
-
-                <div class="animal-info">
-
-                    <h3>Luna</h3>
-
-                    <p>🐱 1 año</p>
-
-                    <p>📍 Maipú</p>
-
-                    <button>Adoptar</button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="perfil" class="pantalla">
-
-            <div class="perfil-header">
-
-                <button onclick="mostrarPantalla('inicio')" class="volver-btn">
-                    ←
-                </button>
-
-                <h2>Mi Perfil</h2>
-
-                <button class="editar-btn">
-                    Editar
-                </button>
-
-            </div>
-
-            <div class="perfil-top">
-
-                <div class="avatar-container">
-
-                    <img id="fotoPerfil" src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png">
-
-                    <label for="subirFoto" class="editar-foto">
-                        ✎
-                    </label>
-
-                    <input type="file" id="subirFoto" accept="image/*">
-
-                </div>
-
-                <h2>Mi perfil</h2>
-
-                <p>📍 Santiago, Chile</p>
-
-                <div class="nivel">
-                    ⭐ Colaborador Oro
-                </div>
-
-            </div>
-
-            <div class="estadisticas">
-
-                <div class="stat-box">
-                    <h3>12</h3>
-                    <span>Reportes</span>
-                </div>
-
-                <div class="stat-box">
-                    <h3>2</h3>
-                    <span>Adopciones</span>
-                </div>
-
-                <div class="stat-box">
-                    <h3>8</h3>
-                    <span>Rescatados</span>
-                </div>
-
-            </div>
-
-            <div class="progreso">
-
-                <div class="progreso-header">
-                    ⭐ Colaborador Oro → Platino
-                    <span>12/20 pts</span>
-                </div>
-
-                <div class="barra">
-                    <div class="barra-fill"></div>
-                </div>
-
-                <p>8 reportes más para alcanzar Colaborador Platino</p>
-
-            </div>
-
-            <h3 class="seccion-titulo">Logros</h3>
-
-            <div class="logros-grid">
-
-                <div class="logro">
-                    🐕
-                    <h4>Primer rescate</h4>
-                    <p>Reportaste tu primer animal</p>
-                </div>
-
-                <div class="logro">
-                    ❤️
-                    <h4>Adoptante</h4>
-                    <p>Primera adopción</p>
-                </div>
-
-                <div class="logro">
-                    ⭐
-                    <h4>Colaborador Oro</h4>
-                    <p>10+ reportes</p>
-                </div>
-
-                <div class="logro">
-                    🏆
-                    <h4>Platino</h4>
-                    <p>20+ reportes</p>
-                </div>
-
-                <div class="logro">
-                    🦸
-                    <h4>Héroe Animal</h4>
-                    <p>5 adopciones</p>
-                </div>
-
-                <div class="logro">
-                    🤝</h4>
-                    <h4>Voluntario</h4>
-                    <p>Únete al equipo</p>
-                </div>
-
-            </div>
-
-            <h3 class="seccion-titulo">Actividad reciente</h3>
-
-            <div class="actividad-item">
-                <strong>Reporte enviado · Pudahuel</strong>
-                <span>Perro herido, atendido por voluntario</span>
-            </div>
-
-            <div class="actividad-item">
-                <strong>Adoptaste a Luna</strong>
-                <span>Gata mestiza, 1 año</span>
-            </div>
-
-            <div class="actividad-item">
-                <strong>¡Subiste a Colaborador Oro!</strong>
-                <span>Superaste 10 reportes</span>
-            </div>
-
-            <h3 class="seccion-titulo">Configuración</h3>
-
-            <div class="config-item">🔔 Notificaciones</div>
-            <div class="config-item">🔒 Privacidad</div>
-            <div class="config-item">❓ Ayuda y soporte</div>
-            <div class="config-item cerrar">🚪 Cerrar sesión</div>
-
-        </section>
-        <!-- PREMIUM -->
-
-        <section id="premium" class="pantalla">
-
-            <div class="perfil-header">
-
-                <button onclick="mostrarPantalla('inicio')" class="volver-btn">
-                    ←
-                </button>
-
-                <h2>Premium</h2>
-
-                <div></div>
-
-            </div>
-
-            <div class="premium-hero">
-
-                <div class="premium-icon">⭐</div>
-
-                <h2>Patitas Premium</h2>
-
-                <p>
-                    Accede a beneficios exclusivos, alertas prioritarias y
-                    ayuda a más animales.
-                </p>
-
-            </div>
-
-            <div class="switch-premium">
-
-                <button id="mensualBtn" class="activo" onclick="cambiarPlan('mensual')">
-
-                    Mensual
-
-                </button>
-
-                <button id="anualBtn" onclick="cambiarPlan('anual')">
-
-                    Anual -30%
-
-                </button>
-
-            </div>
-
-            <div class="plan-card">
-
-                <h3>🐾 Básico</h3>
-
-                <div class="precio">
-                    Gratis
-                </div>
-
-                <ul>
-                    <li>✔ Reportar animales</li>
-                    <li>✔ Ver adopciones</li>
-                    <li>✔ Perfil colaborador</li>
-                    <li>✖ Alertas prioritarias</li>
-                </ul>
-
-            </div>
-
-            <div class="plan-card destacado">
-
-                <span class="popular">
-                    MÁS POPULAR
-                </span>
-
-                <h3>⭐ Pro</h3>
-
-                <div id="precioPro" class="precio">
-                    $4.990/mes
-                </div>
-
-                <ul>
-                    <li>✔ Todo lo del plan Básico</li>
-                    <li>✔ Alertas en tiempo real</li>
-                    <li>✔ Seguimiento avanzado</li>
-                    <li>✔ Sin publicidad</li>
-                </ul>
-
-            </div>
-
-            <div class="plan-card">
-
-                <h3>🏆 Premium</h3>
-
-                <div id="precioPremium" class="precio">
-                    $9.990/mes
-                </div>
-
-                <ul>
-                    <li>✔ Todo lo del plan Pro</li>
-                    <li>✔ Estadísticas avanzadas</li>
-                    <li>✔ Prioridad máxima</li>
-                    <li>✔ Beneficios exclusivos</li>
-                </ul>
-
-            </div>
-
-        </section>
-        <!-- MAPA -->
-
-        <section id="mapa" class="pantalla">
-
-            <div class="screen-header">
-
-                <button onclick="mostrarPantalla('inicio')">
-                    ←
-                </button>
-
-                <h2>Mapa de rescates</h2>
-
-            </div>
-
-            <div class="mapa-filtros">
-
-                <button class="filtro activo" onclick="filtrarMapa(this)">
-                    Todos
-                </button>
-
-                <button class="filtro urgente" onclick="filtrarMapa(this)">
-                    Urgente
-                </button>
-
-                <button class="filtro atencion" onclick="filtrarMapa(this)">
-                    Atención
-                </button>
-
-                <button class="filtro estable" onclick="filtrarMapa(this)">
-                    Estable
-                </button>
-
-                <button class="filtro adopcion" onclick="filtrarMapa(this)">
-                    Adopción
-                </button>
-
-            </div>
-            <div id="mapaReal"></div>
-    </div>
-
-    <div class="estadisticas-mapa">
-
-        <div class="map-stat">
-            <h3>2</h3>
-            <span>Urgentes</span>
         </div>
 
-        <div class="map-stat">
-            <h3>1</h3>
-            <span>Atención</span>
+    </section>
+
+    <!-- ADOPTAR -->
+    <section id="adoptar" class="pantalla">
+
+        <div class="screen-header">
+
+            <button onclick="mostrarPantalla('inicio')">
+                ←
+            </button>
+
+            <h2>Adopciones</h2>
+
         </div>
 
-        <div class="map-stat">
-            <h3>2</h3>
-            <span>Adopción</span>
+        <div class="card-animal">
+
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800">
+
+            <div class="animal-info">
+
+                <h3>Rocky</h3>
+
+                <p>🐶 2 años</p>
+
+                <p>📍 Santiago</p>
+
+                <button>Ver Perfil</button>
+
+            </div>
+
         </div>
 
-    </div>
+        <div class="card-animal">
 
-    <h3 class="seccion-titulo">
-        Rescates cercanos
-    </h3>
+            <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=800">
 
-    <div class="rescate-card">
+            <div class="animal-info">
 
-        <div>
-            <strong>Perro herido en vereda</strong>
-            <p>Pudahuel · 0.8 km</p>
+                <h3>Luna</h3>
+
+                <p>🐱 1 año</p>
+
+                <p>📍 Maipú</p>
+
+                <button>Adoptar</button>
+
+            </div>
+
         </div>
 
-        <span class="badge urgente">
-            Urgente
-        </span>
+    </section>
 
-    </div>
+    <section id="perfil" class="pantalla">
 
-    <div class="rescate-card">
+        <div class="perfil-header">
 
-        <div>
-            <strong>Gata con crías abandonada</strong>
-            <p>Maipú · 1.4 km</p>
+            <button onclick="mostrarPantalla('inicio')" class="volver-btn">
+                ←
+            </button>
+
+            <h2>Mi Perfil</h2>
+
+            <button class="editar-btn">
+                Editar
+            </button>
+
         </div>
 
-        <span class="badge urgente">
-            Urgente
-        </span>
+        <div class="perfil-top">
 
-    </div>
+            <div class="avatar-container">
 
-    <div class="rescate-card">
+                <img id="fotoPerfil" src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png">
 
-        <div>
-            <strong>Cachorro desnutrido</strong>
-            <p>La Florida · 2.1 km</p>
+                <label for="subirFoto" class="editar-foto">
+                    ✎
+                </label>
+
+                <input type="file" id="subirFoto" accept="image/*">
+
+            </div>
+
+            <h2>Mi perfil</h2>
+
+            <p>📍 Santiago, Chile</p>
+
+            <div class="nivel">
+                ⭐ Colaborador Oro
+            </div>
+
         </div>
 
-        <span class="badge atencion">
-            Atención
-        </span>
+        <div class="estadisticas">
 
-    </div>
+            <div class="stat-box">
+                <h3>12</h3>
+                <span>Reportes</span>
+            </div>
 
-    <div class="rescate-card">
+            <div class="stat-box">
+                <h3>2</h3>
+                <span>Adopciones</span>
+            </div>
 
-        <div>
-            <strong>Animal rescatado</strong>
-            <p>Santiago Centro · 3.2 km</p>
+            <div class="stat-box">
+                <h3>8</h3>
+                <span>Rescatados</span>
+            </div>
+
         </div>
 
-        <span class="badge estable">
-            Estable
-        </span>
+        <div class="progreso">
 
-    </div>
+            <div class="progreso-header">
+                ⭐ Colaborador Oro → Platino
+                <span>12/20 pts</span>
+            </div>
 
-    <div class="rescate-card">
+            <div class="barra">
+                <div class="barra-fill"></div>
+            </div>
 
-        <div>
-            <strong>Luna disponible para adopción</strong>
-            <p>Ñuñoa · 3.8 km</p>
+            <p>8 reportes más para alcanzar Colaborador Platino</p>
+
         </div>
 
-        <span class="badge adopcion">
-            Adopción
-        </span>
+        <h3 class="seccion-titulo">Logros</h3>
 
-    </div>
+        <div class="logros-grid">
+
+            <div class="logro">
+                🐕
+                <h4>Primer rescate</h4>
+                <p>Reportaste tu primer animal</p>
+            </div>
+
+            <div class="logro">
+                ❤️
+                <h4>Adoptante</h4>
+                <p>Primera adopción</p>
+            </div>
+
+            <div class="logro">
+                ⭐
+                <h4>Colaborador Oro</h4>
+                <p>10+ reportes</p>
+            </div>
+
+            <div class="logro">
+                🏆
+                <h4>Platino</h4>
+                <p>20+ reportes</p>
+            </div>
+
+            <div class="logro">
+                🦸
+                <h4>Héroe Animal</h4>
+                <p>5 adopciones</p>
+            </div>
+
+            <div class="logro">
+                🤝</h4>
+                <h4>Voluntario</h4>
+                <p>Únete al equipo</p>
+            </div>
+
+        </div>
+
+        <h3 class="seccion-titulo">Actividad reciente</h3>
+
+        <div class="actividad-item">
+            <strong>Reporte enviado · Pudahuel</strong>
+            <span>Perro herido, atendido por voluntario</span>
+        </div>
+
+        <div class="actividad-item">
+            <strong>Adoptaste a Luna</strong>
+            <span>Gata mestiza, 1 año</span>
+        </div>
+
+        <div class="actividad-item">
+            <strong>¡Subiste a Colaborador Oro!</strong>
+            <span>Superaste 10 reportes</span>
+        </div>
+
+        <h3 class="seccion-titulo">Configuración</h3>
+
+        <div class="config-item">🔔 Notificaciones</div>
+        <div class="config-item">🔒 Privacidad</div>
+        <div class="config-item">❓ Ayuda y soporte</div>
+        <div class="config-item cerrar">🚪 Cerrar sesión</div>
+
+    </section>
+    <!-- PREMIUM -->
+
+    <section id="premium" class="pantalla">
+
+        <div class="perfil-header">
+
+            <button onclick="mostrarPantalla('inicio')" class="volver-btn">
+                ←
+            </button>
+
+            <h2>Premium</h2>
+
+            <div></div>
+
+        </div>
+
+        <div class="premium-hero">
+
+            <div class="premium-icon">⭐</div>
+
+            <h2>Patitas Premium</h2>
+
+            <p>
+                Accede a beneficios exclusivos, alertas prioritarias y
+                ayuda a más animales.
+            </p>
+
+        </div>
+
+        <div class="switch-premium">
+
+            <button id="mensualBtn" class="activo" onclick="cambiarPlan('mensual')">
+
+                Mensual
+
+            </button>
+
+            <button id="anualBtn" onclick="cambiarPlan('anual')">
+
+                Anual -30%
+
+            </button>
+
+        </div>
+
+        <div class="plan-card">
+
+            <h3>🐾 Básico</h3>
+
+            <div class="precio">
+                Gratis
+            </div>
+
+            <ul>
+                <li>✔ Reportar animales</li>
+                <li>✔ Ver adopciones</li>
+                <li>✔ Perfil colaborador</li>
+                <li>✖ Alertas prioritarias</li>
+            </ul>
+
+        </div>
+
+        <div class="plan-card destacado">
+
+            <span class="popular">
+                MÁS POPULAR
+            </span>
+
+            <h3>⭐ Pro</h3>
+
+            <div id="precioPro" class="precio">
+                $4.990/mes
+            </div>
+
+            <ul>
+                <li>✔ Todo lo del plan Básico</li>
+                <li>✔ Alertas en tiempo real</li>
+                <li>✔ Seguimiento avanzado</li>
+                <li>✔ Sin publicidad</li>
+            </ul>
+
+        </div>
+
+        <div class="plan-card">
+
+            <h3>🏆 Premium</h3>
+
+            <div id="precioPremium" class="precio">
+                $9.990/mes
+            </div>
+
+            <ul>
+                <li>✔ Todo lo del plan Pro</li>
+                <li>✔ Estadísticas avanzadas</li>
+                <li>✔ Prioridad máxima</li>
+                <li>✔ Beneficios exclusivos</li>
+            </ul>
+
+        </div>
+
+    </section>
+    <!-- MAPA -->
+
+    <section id="mapa" class="pantalla">
+
+        <div class="screen-header">
+
+            <button onclick="mostrarPantalla('inicio')">
+                ←
+            </button>
+
+            <h2>Mapa de rescates</h2>
+
+        </div>
+
+        <div class="mapa-filtros">
+
+            <button class="filtro activo" onclick="filtrarMapa(this)">
+                Todos
+            </button>
+
+            <button class="filtro urgente" onclick="filtrarMapa(this)">
+                Urgente
+            </button>
+
+            <button class="filtro atencion" onclick="filtrarMapa(this)">
+                Atención
+            </button>
+
+            <button class="filtro estable" onclick="filtrarMapa(this)">
+                Estable
+            </button>
+
+            <button class="filtro adopcion" onclick="filtrarMapa(this)">
+                Adopción
+            </button>
+
+        </div>
+        <div id="mapaReal"></div>
+        </div>
+
+        <div class="estadisticas-mapa">
+
+            <div class="map-stat">
+                <h3>2</h3>
+                <span>Urgentes</span>
+            </div>
+
+            <div class="map-stat">
+                <h3>1</h3>
+                <span>Atención</span>
+            </div>
+
+            <div class="map-stat">
+                <h3>2</h3>
+                <span>Adopción</span>
+            </div>
+
+        </div>
+
+        <h3 class="seccion-titulo">
+            Rescates cercanos
+        </h3>
+
+        <div class="rescate-card">
+
+            <div>
+                <strong>Perro herido en vereda</strong>
+                <p>Pudahuel · 0.8 km</p>
+            </div>
+
+            <span class="badge urgente">
+                Urgente
+            </span>
+
+        </div>
+
+        <div class="rescate-card">
+
+            <div>
+                <strong>Gata con crías abandonada</strong>
+                <p>Maipú · 1.4 km</p>
+            </div>
+
+            <span class="badge urgente">
+                Urgente
+            </span>
+
+        </div>
+
+        <div class="rescate-card">
+
+            <div>
+                <strong>Cachorro desnutrido</strong>
+                <p>La Florida · 2.1 km</p>
+            </div>
+
+            <span class="badge atencion">
+                Atención
+            </span>
+
+        </div>
+
+        <div class="rescate-card">
+
+            <div>
+                <strong>Animal rescatado</strong>
+                <p>Santiago Centro · 3.2 km</p>
+            </div>
+
+            <span class="badge estable">
+                Estable
+            </span>
+
+        </div>
+
+        <div class="rescate-card">
+
+            <div>
+                <strong>Luna disponible para adopción</strong>
+                <p>Ñuñoa · 3.8 km</p>
+            </div>
+
+            <span class="badge adopcion">
+                Adopción
+            </span>
+
+        </div>
 
     </section>
     <script src="script.js"></script>
