@@ -37,7 +37,7 @@
             <div class="top-bar">
 
                 <div>
-                    <h2>Hola Francisco 👋</h2>
+                    <h2>Hola👋</h2>
                     <p>Bienvenido nuevamente</p>
                 </div>
 
@@ -56,7 +56,9 @@
                     avanzado y beneficios exclusivos.
                 </p>
 
-                <button>Ver plan premium</button>
+                <button onclick="mostrarPantalla('premium')">
+                    Ver plan premium
+                </button>
 
             </div>
 
@@ -294,7 +296,7 @@
 
                 </div>
 
-                <h2>Francisco</h2>
+                <h2>Mi perfil</h2>
 
                 <p>📍 Santiago, Chile</p>
 
@@ -403,6 +405,106 @@
             <div class="config-item">🔒 Privacidad</div>
             <div class="config-item">❓ Ayuda y soporte</div>
             <div class="config-item cerrar">🚪 Cerrar sesión</div>
+
+        </section> <!-- PREMIUM -->
+
+        <section id="premium" class="pantalla">
+
+            <div class="perfil-header">
+
+                <button onclick="mostrarPantalla('inicio')" class="volver-btn">
+                    ←
+                </button>
+
+                <h2>Premium</h2>
+
+                <div></div>
+
+            </div>
+
+            <div class="premium-hero">
+
+                <div class="premium-icon">⭐</div>
+
+                <h2>Patitas Premium</h2>
+
+                <p>
+                    Accede a beneficios exclusivos, alertas prioritarias y
+                    ayuda a más animales.
+                </p>
+
+            </div>
+
+            <div class="switch-premium">
+
+                <button id="mensualBtn" class="activo" onclick="cambiarPlan('mensual')">
+
+                    Mensual
+
+                </button>
+
+                <button id="anualBtn" onclick="cambiarPlan('anual')">
+
+                    Anual -30%
+
+                </button>
+
+            </div>
+
+            <div class="plan-card">
+
+                <h3>🐾 Básico</h3>
+
+                <div class="precio">
+                    Gratis
+                </div>
+
+                <ul>
+                    <li>✔ Reportar animales</li>
+                    <li>✔ Ver adopciones</li>
+                    <li>✔ Perfil colaborador</li>
+                    <li>✖ Alertas prioritarias</li>
+                </ul>
+
+            </div>
+
+            <div class="plan-card destacado">
+
+                <span class="popular">
+                    MÁS POPULAR
+                </span>
+
+                <h3>⭐ Pro</h3>
+
+                <div id="precioPro" class="precio">
+                    $4.990/mes
+                </div>
+
+                <ul>
+                    <li>✔ Todo lo del plan Básico</li>
+                    <li>✔ Alertas en tiempo real</li>
+                    <li>✔ Seguimiento avanzado</li>
+                    <li>✔ Sin publicidad</li>
+                </ul>
+
+            </div>
+
+            <div class="plan-card">
+
+                <h3>🏆 Premium</h3>
+
+                <div id="precioPremium" class="precio">
+                    $9.990/mes
+                </div>
+
+                <ul>
+                    <li>✔ Todo lo del plan Pro</li>
+                    <li>✔ Estadísticas avanzadas</li>
+                    <li>✔ Prioridad máxima</li>
+                    <li>✔ Beneficios exclusivos</li>
+                </ul>
+
+            </div>
 
         </section>
         <script src="script.js"></script>

@@ -64,3 +64,43 @@ if (subirFoto) {
     });
 
 }
+function cambiarPlan(tipo) {
+
+    const mensualBtn =
+        document.getElementById("mensualBtn");
+
+    const anualBtn =
+        document.getElementById("anualBtn");
+
+    const precioPro =
+        document.getElementById("precioPro");
+
+    const precioPremium =
+        document.getElementById("precioPremium");
+
+    mensualBtn.classList.remove("activo");
+    anualBtn.classList.remove("activo");
+
+    if (tipo === "mensual") {
+
+        mensualBtn.classList.add("activo");
+
+        precioPro.innerHTML =
+            "$4.990/mes";
+
+        precioPremium.innerHTML =
+            "$9.990/mes";
+
+    } else {
+
+        anualBtn.classList.add("activo");
+
+        precioPro.innerHTML =
+            "$41.916/año";
+
+        precioPremium.innerHTML =
+            "$83.916/año";
+
+    }
+
+}
