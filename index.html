@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patitas al Rescate</title>
@@ -549,106 +550,100 @@
                 </button>
 
             </div>
+            <div id="mapaReal"></div>
+    </div>
 
-            <div class="mapa-box">
+    <div class="estadisticas-mapa">
 
-                <div class="pin rojo">!</div>
-                <div class="pin amarillo">▲</div>
-                <div class="pin verde">✓</div>
-                <div class="pin azul">♥</div>
+        <div class="map-stat">
+            <h3>2</h3>
+            <span>Urgentes</span>
+        </div>
 
-            </div>
+        <div class="map-stat">
+            <h3>1</h3>
+            <span>Atención</span>
+        </div>
 
-            <div class="estadisticas-mapa">
+        <div class="map-stat">
+            <h3>2</h3>
+            <span>Adopción</span>
+        </div>
 
-                <div class="map-stat">
-                    <h3>2</h3>
-                    <span>Urgentes</span>
-                </div>
+    </div>
 
-                <div class="map-stat">
-                    <h3>1</h3>
-                    <span>Atención</span>
-                </div>
+    <h3 class="seccion-titulo">
+        Rescates cercanos
+    </h3>
 
-                <div class="map-stat">
-                    <h3>2</h3>
-                    <span>Adopción</span>
-                </div>
+    <div class="rescate-card">
 
-            </div>
+        <div>
+            <strong>Perro herido en vereda</strong>
+            <p>Pudahuel · 0.8 km</p>
+        </div>
 
-            <h3 class="seccion-titulo">
-                Rescates cercanos
-            </h3>
+        <span class="badge urgente">
+            Urgente
+        </span>
 
-            <div class="rescate-card">
+    </div>
 
-                <div>
-                    <strong>Perro herido en vereda</strong>
-                    <p>Pudahuel · 0.8 km</p>
-                </div>
+    <div class="rescate-card">
 
-                <span class="badge urgente">
-                    Urgente
-                </span>
+        <div>
+            <strong>Gata con crías abandonada</strong>
+            <p>Maipú · 1.4 km</p>
+        </div>
 
-            </div>
+        <span class="badge urgente">
+            Urgente
+        </span>
 
-            <div class="rescate-card">
+    </div>
 
-                <div>
-                    <strong>Gata con crías abandonada</strong>
-                    <p>Maipú · 1.4 km</p>
-                </div>
+    <div class="rescate-card">
 
-                <span class="badge urgente">
-                    Urgente
-                </span>
+        <div>
+            <strong>Cachorro desnutrido</strong>
+            <p>La Florida · 2.1 km</p>
+        </div>
 
-            </div>
+        <span class="badge atencion">
+            Atención
+        </span>
 
-            <div class="rescate-card">
+    </div>
 
-                <div>
-                    <strong>Cachorro desnutrido</strong>
-                    <p>La Florida · 2.1 km</p>
-                </div>
+    <div class="rescate-card">
 
-                <span class="badge atencion">
-                    Atención
-                </span>
+        <div>
+            <strong>Animal rescatado</strong>
+            <p>Santiago Centro · 3.2 km</p>
+        </div>
 
-            </div>
+        <span class="badge estable">
+            Estable
+        </span>
 
-            <div class="rescate-card">
+    </div>
 
-                <div>
-                    <strong>Animal rescatado</strong>
-                    <p>Santiago Centro · 3.2 km</p>
-                </div>
+    <div class="rescate-card">
 
-                <span class="badge estable">
-                    Estable
-                </span>
+        <div>
+            <strong>Luna disponible para adopción</strong>
+            <p>Ñuñoa · 3.8 km</p>
+        </div>
 
-            </div>
+        <span class="badge adopcion">
+            Adopción
+        </span>
 
-            <div class="rescate-card">
+    </div>
 
-                <div>
-                    <strong>Luna disponible para adopción</strong>
-                    <p>Ñuñoa · 3.8 km</p>
-                </div>
-
-                <span class="badge adopcion">
-                    Adopción
-                </span>
-
-            </div>
-
-        </section>
-        <script src="script.js"></script>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 </body>
 

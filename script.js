@@ -1,13 +1,18 @@
 function mostrarPantalla(id) {
 
-    document.querySelectorAll(".pantalla")
-        .forEach(pantalla => {
-            pantalla.classList.remove("activa");
+    document
+        .querySelectorAll(".pantalla")
+        .forEach(p => {
+            p.classList.remove("activa");
         });
 
     document
         .getElementById(id)
         .classList.add("activa");
+
+    if (id === "mapa") {
+        setTimeout(iniciarMapa, 200);
+    }
 }
 
 function seleccionarAnimal(elemento) {
@@ -114,4 +119,59 @@ function filtrarMapa(btn) {
 
     btn.classList.add("activo");
 
+}
+let mapaCargado = false;
+
+function iniciarMapa() {
+
+    if (mapaCargado) return;
+
+    mapaCargado = true;
+
+    const mapa = L.map('mapaReal').setView(
+        [-33.4489, -70.6693],
+        11
+    );
+
+    L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+            attribution: 'OpenStreetMap'
+        }
+    ).addTo(mapa);
+
+    // Pudahuel
+    L.marker([-33.438, -70.790])
+        .addTo(mapa)
+        .bindPopup(
+            '🚨 Perro herido<br>Pudahuel'
+        );
+
+    // Maipú
+    L.marker([-33.511, -70.760])
+        .addTo(mapa)
+        .bindPopup(
+            '🚨 Gata abandonada'
+        );
+
+    // La Florida
+    L.marker([-33.530, -70.590])
+        .addTo(mapa)
+        .bindPopup(
+            '⚠ Cachorro desnutrido'
+        );
+
+    // Santiago Centro
+    L.marker([-33.4489, -70.6693])
+        .addTo(mapa)
+        .bindPopup(
+            '✅ Animal rescatado'
+        );
+
+    // Ñuñoa
+    L.marker([-33.456, -70.600])
+        .addTo(mapa)
+        .bindPopup(
+            '❤️ Luna en adopción'
+        );
 }
