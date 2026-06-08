@@ -680,3 +680,33 @@ body {
     overflow: hidden;
     border: 2px solid #ddd;
 }
+
+.filtros-adopcion {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.filtro {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #ececec;
+    cursor: pointer;
+}
+
+.filtro.activo {
+    background: #36573b;
+    color: white;
+}
+
+.foto-animal {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#perfilAnimal .contenido {
+    padding: 20px;
+}

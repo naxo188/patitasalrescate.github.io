@@ -175,3 +175,67 @@ function iniciarMapa() {
             '❤️ Luna en adopción'
         );
 }
+function abrirPerfilAnimal(
+    nombre,
+    tipo,
+    edad,
+    ubicacion,
+    descripcion,
+    foto
+) {
+
+    document.getElementById("animalNombre").innerHTML =
+        nombre;
+
+    document.getElementById("animalEdad").innerHTML =
+        tipo + " • " + edad;
+
+    document.getElementById("animalUbicacion").innerHTML =
+        "📍 " + ubicacion;
+
+    document.getElementById("animalDescripcion").innerHTML =
+        descripcion;
+
+    document.getElementById("animalFoto").src =
+        foto;
+
+    mostrarPantalla("perfilAnimal");
+
+}
+
+function filtrarAnimales(tipo, btn) {
+
+    document
+        .querySelectorAll(".filtro")
+        .forEach(f => {
+            f.classList.remove("activo");
+        });
+
+    btn.classList.add("activo");
+
+    const cards =
+        document.querySelectorAll(".card-animal");
+
+    cards.forEach(card => {
+
+        if (tipo === "todos") {
+
+            card.style.display = "block";
+
+        } else {
+
+            if (card.classList.contains(tipo)) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        }
+
+    });
+
+}
