@@ -262,3 +262,45 @@ function previsualizarFoto(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+function abrirChat() {
+    document.getElementById('chatOverlay').classList.add('abierto');
+}
+
+function cerrarChat() {
+    document.getElementById('chatOverlay').classList.remove('abierto');
+}
+
+async function enviarMensaje() {
+    const input = document.getElementById('chatInput');
+    const mensajes = document.getElementById('chatMensajes');
+    const texto = input.value.trim();
+    if (!texto) return;
+
+    mensajes.innerHTML += `<div class="msg-user"><span>${texto}</span></div>`;
+    input.value = '';
+    mensajes.scrollTop = mensajes.scrollHeight;
+
+    const typing = document.createElement('div');
+    typing.className = 'msg-typing';
+    typing.innerHTML = '<span>...</span>';
+    mensajes.appendChild(typing);
+    mensajes.scrollTop = mensajes.scrollHeight;
+
+    try {
+        const res = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: texto })
+        });
+
+        const data = await res.json();
+        typing.remove();
+
+        mensajes.innerHTML += `<div class="msg-bot"><span>${data.reply}</span></div>`;
+        mensajes.scrollTop = mensajes.scrollHeight;
+
+    } catch (e) {
+        typing.remove();
+        mensajes.innerHTML += `<div class="msg-bot"><span>Lo siento, hubo un error. Intenta de nuevo.</span></div>`;
+    }
+}

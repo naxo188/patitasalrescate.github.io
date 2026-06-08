@@ -108,7 +108,32 @@
                 </div>
 
             </div>
+            <!-- CHATBOT FLOTANTE -->
+            <button class="chat-btn" onclick="abrirChat()">🐾</button>
 
+            <!-- PANTALLA CHAT -->
+            <div class="chat-overlay" id="chatOverlay">
+                <div class="chat-box">
+                    <div class="chat-header">
+                        <div>
+                            <strong>Asistente Patitas</strong>
+                            <p>Experto en cuidado animal</p>
+                        </div>
+                        <button onclick="cerrarChat()">✕</button>
+                    </div>
+                    <div class="chat-mensajes" id="chatMensajes">
+                        <div class="msg-bot">
+                            <span>👋 Hola! Soy tu asistente de cuidado animal. Puedo ayudarte con dudas sobre rescate,
+                                alimentación, salud y más. ¿En qué te ayudo?</span>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Escribe tu pregunta..."
+                            onkeydown="if(event.key==='Enter') enviarMensaje()">
+                        <button onclick="enviarMensaje()">➤</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         </section>
