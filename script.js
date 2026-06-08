@@ -296,7 +296,7 @@ async function enviarMensaje() {
         const data = await res.json();
         typing.remove();
 
-        mensajes.innerHTML += `<div class="msg-bot"><span>${data.reply}</span></div>`;
+        mensajes.innerHTML += `<div class="msg-bot"><span>${data.reply || data.error || 'Sin respuesta'}</span></div>`;
         mensajes.scrollTop = mensajes.scrollHeight;
 
     } catch (e) {
