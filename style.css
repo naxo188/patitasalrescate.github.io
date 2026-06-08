@@ -91,6 +91,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .premium-banner {
@@ -124,7 +126,6 @@ body {
 }
 
 .menu-card {
-    background: white;
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
@@ -134,6 +135,22 @@ body {
 
 .menu-card:hover {
     transform: translateY(-3px);
+}
+
+.card-reportar {
+    background: #fff0f0;
+}
+
+.card-adoptar {
+    background: #fff0f5;
+}
+
+.card-perfil {
+    background: #f0f4ff;
+}
+
+.card-mapa {
+    background: #f0fff4;
 }
 
 .icono {
@@ -164,13 +181,32 @@ body {
     border-radius: 15px;
     margin-bottom: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.actividad-icono {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.actividad-item strong {
+    display: block;
+    font-size: 14px;
 }
 
 .actividad-item span {
     display: block;
-    margin-top: 6px;
+    margin-top: 4px;
     color: #777;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* CABECERA */

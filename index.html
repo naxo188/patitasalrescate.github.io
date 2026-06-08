@@ -36,84 +36,80 @@
         <section id="inicio" class="pantalla">
 
             <div class="top-bar">
-
                 <div>
                     <h2>Hola👋</h2>
                     <p>Bienvenido nuevamente</p>
                 </div>
-
-                <div class="avatar-mini">
-                    👤
-                </div>
-
+                <div class="avatar-mini">NA</div>
             </div>
 
             <div class="premium-banner">
-
                 <h3>⭐ Plan Premium</h3>
-
-                <p>
-                    Alertas prioritarias, seguimiento
-                    avanzado y beneficios exclusivos.
-                </p>
-
-                <button onclick="mostrarPantalla('premium')">
-                    Ver plan premium
-                </button>
-
+                <p>Alertas prioritarias, seguimiento avanzado y beneficios exclusivos.</p>
+                <button onclick="mostrarPantalla('premium')">Ver plan premium</button>
             </div>
 
             <h3 class="titulo">Acciones rápidas</h3>
 
             <div class="menu-grid">
 
-                <div class="menu-card" onclick="mostrarPantalla('reportar')">
+                <div class="menu-card card-reportar" onclick="mostrarPantalla('reportar')">
                     <div class="icono">🚨</div>
                     <h4>Reportar</h4>
-                    <p>Reporta animales en riesgo</p>
+                    <p>Animales en riesgo</p>
                 </div>
 
-                <div class="menu-card" onclick="mostrarPantalla('adoptar')">
+                <div class="menu-card card-adoptar" onclick="mostrarPantalla('adoptar')">
                     <div class="icono">❤️</div>
                     <h4>Adoptar</h4>
                     <p>Encuentra un compañero</p>
                 </div>
 
-                <div class="menu-card" onclick="mostrarPantalla('perfil')">
+                <div class="menu-card card-perfil" onclick="mostrarPantalla('perfil')">
                     <div class="icono">👤</div>
                     <h4>Mi Perfil</h4>
                     <p>Tu actividad</p>
                 </div>
 
-                <div class="menu-card" onclick="mostrarPantalla('mapa')">
+                <div class="menu-card card-mapa" onclick="mostrarPantalla('mapa')">
                     <div class="icono">📍</div>
                     <h4>Mapa</h4>
-                    <p>Ver rescates cercanos</p>
+                    <p>Rescates cercanos</p>
                 </div>
 
             </div>
-
 
             <div class="actividad">
 
                 <h3>📋 Actividad reciente</h3>
 
                 <div class="actividad-item">
-                    <strong>Firulais fue adoptado exitosamente ❤️</strong>
-                    <span>Hace 2 horas · Peñalolén</span>
+                    <div class="actividad-icono" style="background:#ffebee">🐾</div>
+                    <div>
+                        <strong>Firulais fue adoptado exitosamente</strong>
+                        <span>Hace 2 horas · Peñalolén</span>
+                    </div>
                 </div>
 
                 <div class="actividad-item">
-                    <strong>Nuevo rescate reportado en Pudahuel 🚨</strong>
-                    <span>Hace 5 horas</span>
+                    <div class="actividad-icono" style="background:#fff3e0">🚨</div>
+                    <div>
+                        <strong>Nuevo rescate reportado en Pudahuel</strong>
+                        <span>Hace 5 horas</span>
+                    </div>
                 </div>
 
                 <div class="actividad-item">
-                    <strong>3 nuevos voluntarios se unieron 🙌</strong>
-                    <span>Ayer</span>
+                    <div class="actividad-icono" style="background:#e8f5e9">🙌</div>
+                    <div>
+                        <strong>3 nuevos voluntarios se unieron</strong>
+                        <span>Ayer</span>
+                    </div>
                 </div>
 
             </div>
+
+        </section>
 
         </section>
 
@@ -497,7 +493,7 @@
                     $9.990/mes
                 </div>
 
-                <ul> id="beneficiosPremium">
+                <ul id="beneficiosPremium">
                     <li>✔ Todo lo del plan Pro</li>
                     <li>✔ Estadísticas avanzadas</li>
                     <li>✔ Prioridad máxima</li>
