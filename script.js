@@ -249,3 +249,16 @@ function filtrarAnimales(tipo, btn) {
     });
 
 }
+function previsualizarFoto(input) {
+    const preview = document.getElementById('fotoAnimalPreview');
+    const placeholder = document.getElementById('fotoPreview');
+    if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = e => {
+            preview.src = e.target.result;
+            preview.style.display = 'block';
+            placeholder.style.display = 'none';
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}

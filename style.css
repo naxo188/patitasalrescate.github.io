@@ -746,3 +746,57 @@ body {
 #perfilAnimal .contenido {
     padding: 20px;
 }
+
+.foto-upload {
+    border: 2px dashed #ccc;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    background: #fafafa;
+    transition: .3s;
+}
+
+.foto-upload:hover {
+    border-color: #36573b;
+    background: #f0fff4;
+}
+
+.foto-upload p {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.foto-upload small {
+    color: #999;
+}
+
+.logro-desbloqueado {
+    background: white;
+}
+
+.logro-bloqueado {
+    background: #f5f5f5;
+    opacity: 0.6;
+}
+
+.logro-bloqueado h4,
+.logro-bloqueado p {
+    color: #aaa;
+}
+
+.logro-icono {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.config-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.config-arrow {
+    color: #aaa;
+}
