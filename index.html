@@ -199,27 +199,14 @@
         <section id="adoptar" class="pantalla">
 
             <div class="screen-header">
-
-                <button onclick="mostrarPantalla('inicio')">
-                    ←
-                </button>
-
+                <button onclick="mostrarPantalla('inicio')">←</button>
                 <h2>Adopciones</h2>
-                <div class="filtros-adopcion">
+            </div>
 
-                    <button class="filtro activo" onclick="filtrarAnimales('todos',this)">
-                        Todos
-                    </button>
-
-                    <button class="filtro" onclick="filtrarAnimales('perro',this)">
-                        Perros
-                    </button>
-
-                    <button class="filtro" onclick="filtrarAnimales('gato',this)">
-                        Gatos
-                    </button>
-
-                </div>
+            <div class="filtros-adopcion">
+                <button class="filtro activo" onclick="filtrarAnimales('todos',this)">Todos</button>
+                <button class="filtro" onclick="filtrarAnimales('perro',this)">Perros</button>
+                <button class="filtro" onclick="filtrarAnimales('gato',this)">Gatos</button>
             </div>
 
             <div class="card-animal perro">
@@ -493,7 +480,7 @@
                     $4.990/mes
                 </div>
 
-                <ul>
+                <ul id="beneficiosPro">
                     <li>✔ Todo lo del plan Básico</li>
                     <li>✔ Alertas en tiempo real</li>
                     <li>✔ Seguimiento avanzado</li>
@@ -510,7 +497,7 @@
                     $9.990/mes
                 </div>
 
-                <ul>
+                <ul> id="beneficiosPremium">
                     <li>✔ Todo lo del plan Pro</li>
                     <li>✔ Estadísticas avanzadas</li>
                     <li>✔ Prioridad máxima</li>

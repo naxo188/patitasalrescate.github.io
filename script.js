@@ -70,45 +70,55 @@ if (subirFoto) {
 
 }
 function cambiarPlan(tipo) {
+    const mensualBtn = document.getElementById('mensualBtn');
+    const anualBtn = document.getElementById('anualBtn');
+    const precioPro = document.getElementById('precioPro');
+    const precioPremium = document.getElementById('precioPremium');
+    const beneficiosPro = document.getElementById('beneficiosPro');
+    const beneficiosPremium = document.getElementById('beneficiosPremium');
 
-    const mensualBtn =
-        document.getElementById("mensualBtn");
+    mensualBtn.classList.remove('activo');
+    anualBtn.classList.remove('activo');
 
-    const anualBtn =
-        document.getElementById("anualBtn");
-
-    const precioPro =
-        document.getElementById("precioPro");
-
-    const precioPremium =
-        document.getElementById("precioPremium");
-
-    mensualBtn.classList.remove("activo");
-    anualBtn.classList.remove("activo");
-
-    if (tipo === "mensual") {
-
-        mensualBtn.classList.add("activo");
-
-        precioPro.innerHTML =
-            "$4.990/mes";
-
-        precioPremium.innerHTML =
-            "$9.990/mes";
-
+    if (tipo === 'mensual') {
+        mensualBtn.classList.add('activo');
+        precioPro.innerHTML = '$4.990/mes';
+        precioPremium.innerHTML = '$9.990/mes';
+        beneficiosPro.innerHTML = `
+            <li>✔ Todo lo del plan Básico</li>
+            <li>✔ Alertas en tiempo real</li>
+            <li>✔ Seguimiento de tus reportes</li>
+            <li>✔ Sin publicidad</li>
+            <li>✔ Badge "Rescatador Pro"</li>`;
+        beneficiosPremium.innerHTML = `
+            <li>✔ Todo lo del plan Pro</li>
+            <li>✔ Estadísticas avanzadas</li>
+            <li>✔ Prioridad máxima en reportes</li>
+            <li>✔ Badge "Héroe Animal"</li>
+            <li>✔ Certificado de impacto mensual</li>`;
     } else {
-
-        anualBtn.classList.add("activo");
-
-        precioPro.innerHTML =
-            "$41.916/año";
-
-        precioPremium.innerHTML =
-            "$83.916/año";
-
+        anualBtn.classList.add('activo');
+        precioPro.innerHTML = '$41.916/año <small style="font-size:14px;color:#888">($3.493/mes)</small>';
+        precioPremium.innerHTML = '$83.916/año <small style="font-size:14px;color:#888">($6.993/mes)</small>';
+        beneficiosPro.innerHTML = `
+            <li>✔ Todo lo del plan Básico</li>
+            <li>✔ Alertas en tiempo real</li>
+            <li>✔ Seguimiento de tus reportes</li>
+            <li>✔ Sin publicidad</li>
+            <li>✔ Badge "Rescatador Pro"</li>
+            <li>✔ 2 meses gratis incluidos</li>
+            <li>✔ Acceso anticipado a funciones</li>`;
+        beneficiosPremium.innerHTML = `
+            <li>✔ Todo lo del plan Pro</li>
+            <li>✔ Estadísticas avanzadas</li>
+            <li>✔ Prioridad máxima en reportes</li>
+            <li>✔ Badge "Héroe Animal" exclusivo</li>
+            <li>✔ Certificado de impacto mensual</li>
+            <li>✔ 2 meses gratis incluidos</li>
+            <li>✔ Soporte prioritario</li>`;
     }
-
 }
+
 function filtrarMapa(btn) {
 
     document
