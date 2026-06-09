@@ -1005,6 +1005,7 @@ body {
     overflow: hidden;
     max-height: 85vh;
     overflow-y: auto;
+    position: relative;
 }
 
 .modal-foto {
@@ -1028,9 +1029,9 @@ body {
 }
 
 .modal-cerrar {
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 15px;
+    right: calc(50% - 180px);
     width: 35px;
     height: 35px;
     border-radius: 50%;
