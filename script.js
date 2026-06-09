@@ -304,3 +304,125 @@ async function enviarMensaje() {
         mensajes.innerHTML += `<div class="msg-bot"><span>Lo siento, hubo un error. Intenta de nuevo.</span></div>`;
     }
 }
+const mapElement = document.getElementById("map");
+
+if (mapElement) {
+
+    const map = L.map('map').setView([-33.4489, -70.6693], 11);
+
+    L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+            attribution: '© OpenStreetMap'
+        }
+    ).addTo(map);
+
+    L.marker([-33.4489, -70.6693])
+        .addTo(map)
+        .bindPopup("🚨 Rescate reportado");
+
+    L.marker([-33.4372, -70.6506])
+        .addTo(map)
+        .bindPopup("🐶 Rocky busca hogar");
+
+    L.marker([-33.4569, -70.6483])
+        .addTo(map)
+        .bindPopup("🐱 Luna disponible");
+}
+let mapa;
+let marcadores = [];
+
+const mapaElemento = document.getElementById("mapaReal");
+
+if (mapaElemento) {
+
+    mapa = L.map("mapaReal").setView([-33.4489, -70.6693], 11);
+
+    L.tileLayer(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            attribution: "© OpenStreetMap"
+        }
+    ).addTo(mapa);
+
+    agregarMarcador(
+        -33.4489,
+        -70.6693,
+        "🐶 Rocky busca hogar",
+        "adopcion"
+    );
+
+    agregarMarcador(
+        -33.4569,
+        -70.6483,
+        "🐱 Luna disponible",
+        "adopcion"
+    );
+
+    agregarMarcador(
+        -33.4700,
+        -70.6900,
+        "🚨 Perro herido",
+        "urgente"
+    );
+
+    agregarMarcador(
+        -33.5180,
+        -70.5980,
+        "⚠ Cachorro desnutrido",
+        "atencion"
+    );
+
+    agregarMarcador(
+        -33.4372,
+        -70.6506,
+        "✅ Animal recuperado",
+        "estable"
+    );
+}
+
+function agregarMarcador(lat, lng, texto, tipo) {
+
+    const marker = L.marker([lat, lng]).addTo(mapa);
+
+    marker.bindPopup(texto);
+
+    marker.tipo = tipo;
+
+    marcadores.push(marker);
+}
+
+function filtrarMarcadores(tipo, boton) {
+
+    document.querySelectorAll(".filtro")
+        .forEach(b => b.classList.remove("activo"));
+
+    boton.classList.add("activo");
+
+    marcadores.forEach(marker => {
+
+        mapa.removeLayer(marker);
+
+        if (tipo === "todos" || marker.tipo === tipo) {
+            marker.addTo(mapa);
+        }
+
+    });
+}
+
+function abrirPerfilAnimal(
+    nombre,
+    edad,
+    ubicacion,
+    descripcion,
+    foto
+) {
+
+    document.getElementById("animalNombre").textContent = nombre;
+    document.getElementById("animalEdad").textContent = edad;
+    document.getElementById("animalUbicacion").textContent = ubicacion;
+    document.getElementById("animalDescripcion").textContent = descripcion;
+    document.getElementById("animalFoto").src = foto;
+
+    mostrarPantalla("perfilAnimal");
+}

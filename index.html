@@ -2,11 +2,11 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patitas al Rescate</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 
 <body>
@@ -542,29 +542,29 @@
 
             <div class="mapa-filtros">
 
-                <button class="filtro activo" onclick="filtrarMapa(this)">
+                <button class="filtro activo" onclick="filtrarMarcadores('todos', this)">
                     Todos
                 </button>
 
-                <button class="filtro urgente" onclick="filtrarMapa(this)">
+                <button class="filtro urgente" onclick="filtrarMarcadores('urgente', this)">
                     Urgente
                 </button>
 
-                <button class="filtro atencion" onclick="filtrarMapa(this)">
+                <button class="filtro atencion" onclick="filtrarMarcadores('atencion', this)">
                     Atención
                 </button>
 
-                <button class="filtro estable" onclick="filtrarMapa(this)">
+                <button class="filtro estable" onclick="filtrarMarcadores('estable', this)">
                     Estable
                 </button>
 
-                <button class="filtro adopcion" onclick="filtrarMapa(this)">
+                <button class="filtro adopcion" onclick="filtrarMarcadores('adopcion', this)">
                     Adopción
                 </button>
 
             </div>
-            <div id="mapaReal"></div>
 
+            <div id="mapaReal"></div>
 
             <div class="estadisticas-mapa">
 
@@ -588,6 +588,20 @@
             <h3 class="seccion-titulo">
                 Rescates cercanos
             </h3>
+
+            <div class="rescate-card"
+                onclick="abrirPerfilAnimal('Rocky','Pug · 2 años','Santiago Centro','Perro cariñoso y juguetón que busca una familia.','https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800')">
+
+                <div>
+                    <strong>🐶 Rocky busca hogar</strong>
+                    <p>Santiago Centro · 1.2 km</p>
+                </div>
+
+                <span class="badge adopcion">
+                    Adopción
+                </span>
+
+            </div>
 
             <div class="rescate-card">
 
@@ -628,20 +642,8 @@
 
             </div>
 
-            <div class="rescate-card">
-
-                <div>
-                    <strong>Animal rescatado</strong>
-                    <p>Santiago Centro · 3.2 km</p>
-                </div>
-
-                <span class="badge estable">
-                    Estable
-                </span>
-
-            </div>
-
-            <div class="rescate-card">
+            <div class="rescate-card"
+                onclick="abrirPerfilAnimal('Luna','Mestiza · 1 año','Ñuñoa','Luna es muy sociable y está lista para ser adoptada.','https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=800')">
 
                 <div>
                     <strong>Luna disponible para adopción</strong>
@@ -655,39 +657,9 @@
             </div>
 
         </section>
-        <section id="perfilAnimal" class="pantalla">
-
-            <div class="screen-header">
-
-                <button onclick="mostrarPantalla('adoptar')">
-                    ←
-                </button>
-
-                <h2>Perfil Animal</h2>
-
-            </div>
-
-            <img id="animalFoto" class="foto-animal">
-
-            <div class="contenido">
-
-                <h2 id="animalNombre"></h2>
-
-                <p id="animalEdad"></p>
-
-                <p id="animalUbicacion"></p>
-
-                <p id="animalDescripcion"></p>
-
-                <button class="btn-main">
-                    ❤️ Quiero Adoptar
-                </button>
-
-            </div>
-
-        </section>
         <script src="script.js"></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 </body>
 

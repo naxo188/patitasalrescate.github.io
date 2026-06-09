@@ -944,3 +944,24 @@ body {
     font-size: 20px;
     display: inline-block;
 }
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#mapaReal {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.foto-animal {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
